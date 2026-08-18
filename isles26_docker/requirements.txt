@@ -1,0 +1,6 @@
+nnunetv2
+SimpleITK
+scikit-image
+fastapi
+uvicorn
+numpy

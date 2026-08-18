@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Large Datasets, Raw Images, and Processed Data
+data/
+raw_data/
+checkpoints/
+sync_temp/
+
+# Medical Imaging Data & Formats
+*.nii
+*.nii.gz
+*.b2nd
+*.pkl
+*.pth
+*.pt
+*.onnx
+*.bin
+*.h5
+*.hdf5
+*.npz
+
+# Model Archive Tarballs & Large Archives
+*.tar
+*.tar.gz
+*.zip
+*.7z
+*.rar
+`
+
+# Logs & Temporary Files
+*.log
+*.tmp
+temp/
+scratch/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# IDE Configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Private / Internal Notes & Keys
+0DNT/
+*key*.txt
+*credentials*
+*secret*

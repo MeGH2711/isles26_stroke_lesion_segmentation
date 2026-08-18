@@ -1,0 +1,6 @@
+{
+  "version": "1.0-baseline-only",
+  "description": "Clean inference weights for ISLES26 nnU-Net Baseline (5-fold ensemble)",
+  "timestamp_utc": "2026-08-12T20:06:07.221371+00:00",
+  "architecture": "5-fold Baseline (nnUNetTrainer / nnUNetPlans / 3d_fullres)"
+}

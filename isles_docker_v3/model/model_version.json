@@ -1,0 +1,12 @@
+{
+  "version": "3.0-optimized-ensemble",
+  "description": "Clean inference weights for 10-fold ensemble (ResEnc-M + Baseline)",
+  "timestamp_utc": "2026-08-16T07:50:04.161643+00:00",
+  "architecture": "10-fold ensemble (5x Baseline + 5x ResEnc-M)",
+  "ensemble_weights": {
+    "resenc": 0.65,
+    "baseline": 0.35
+  },
+  "threshold": 0.45,
+  "min_component_size": 8
+}

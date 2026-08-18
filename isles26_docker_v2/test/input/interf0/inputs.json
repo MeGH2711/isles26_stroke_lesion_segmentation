@@ -1,0 +1,38 @@
+[
+    {
+        "socket": {
+            "slug": "t1-brain-mri",
+            "relative_path": "images/t1-brain-mri",
+            "is_image_kind": true,
+            "is_panimg_kind": true,
+            "is_dicom_image_kind": false,
+            "is_json_kind": false,
+            "is_file_kind": false,
+            "is_json_file_kind": false
+        },
+        "value": {
+            "pk": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "image": {
+                "pk": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+                "name": "test_image.nii.gz"
+            }
+        }
+    },
+    {
+        "socket": {
+            "slug": "stroke-metadata",
+            "relative_path": "stroke-metadata.json",
+            "is_image_kind": false,
+            "is_panimg_kind": false,
+            "is_dicom_image_kind": false,
+            "is_json_kind": true,
+            "is_file_kind": false,
+            "is_json_file_kind": false
+        },
+        "value": {
+            "CENTER": "R005",
+            "CHRONICITY": 0,
+            "DAYS_POST_STROKE": 121.5
+        }
+    }
+]
