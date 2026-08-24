@@ -1,0 +1,180 @@
+Setup ...
+GPU runtime detected — using --gpus all
+Building Docker image: isles26-ensemble-algorithm
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.17kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/pytorch/pytorch:2.13.0-cuda12.6-cudnn9-runtime
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 184B 0.0s done
+#4 DONE 0.1s
+
+#5 [ 1/10] FROM docker.io/pytorch/pytorch:2.13.0-cuda12.6-cudnn9-runtime@sha256:6acf597eeb8e376a96580dde4952f37cc017fef732bb40bfc73f28f25e3f64b4
+#5 resolve docker.io/pytorch/pytorch:2.13.0-cuda12.6-cudnn9-runtime@sha256:6acf597eeb8e376a96580dde4952f37cc017fef732bb40bfc73f28f25e3f64b4 0.1s done
+#5 DONE 0.1s
+
+#6 [ 2/10] RUN groupadd -r user && useradd -m --no-log-init -r -g user user
+#6 CACHED
+
+#7 [ 3/10] WORKDIR /opt/app
+#7 CACHED
+
+#8 [ 4/10] RUN python -m venv --system-site-packages --without-pip /home/user/venv
+#8 CACHED
+
+#9 [ 6/10] RUN python -m pip install     --user     --no-cache-dir     --no-color     --requirement /opt/app/requirements.txt
+#9 CACHED
+
+#10 [ 7/10] COPY --chown=user:user custom_trainers/logging_trainer.py /tmp/logging_trainer.py
+#10 CACHED
+
+#11 [ 9/10] COPY --chown=user:user app.py /opt/app/
+#11 CACHED
+
+#12 [ 8/10] RUN NNUNET_DIR=$(python -c "import nnunetv2; import os; print(os.path.dirname(nnunetv2.__file__))") &&     cp /tmp/logging_trainer.py "${NNUNET_DIR}/training/nnUNetTrainer/variants/logging_trainer.py" &&     echo "Installed custom trainer to: ${NNUNET_DIR}/training/nnUNetTrainer/variants/logging_trainer.py"
+#12 CACHED
+
+#13 [ 5/10] COPY --chown=user:user requirements.txt /opt/app/
+#13 CACHED
+
+#14 [10/10] COPY --chown=user:user inference.py /opt/app/
+#14 CACHED
+
+#15 exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:e0edc01145581bf78cac0cd8a07463dfff223edce84d11e2af2ad3af3fd444f0 0.0s done
+#15 exporting config sha256:5c42ebc4acea471db9b866a048d47d00b80739ecba9ab23e887d1e29048ce7e7 0.0s done
+#15 exporting attestation manifest sha256:727f21660c832e41babaa34ac53ba127421fbaaba736b8f861aed9f844a7f955
+#15 exporting attestation manifest sha256:727f21660c832e41babaa34ac53ba127421fbaaba736b8f861aed9f844a7f955 0.2s done
+#15 exporting manifest list sha256:624f91c041e875d9a25a983e3feb81a2fe25cdf6952493e9d179896f84399da4
+#15 exporting manifest list sha256:624f91c041e875d9a25a983e3feb81a2fe25cdf6952493e9d179896f84399da4 0.1s done
+#15 naming to docker.io/library/isles26-ensemble-algorithm:latest
+#15 naming to docker.io/library/isles26-ensemble-algorithm:latest 0.0s done
+#15 unpacking to docker.io/library/isles26-ensemble-algorithm:latest 0.0s done
+#15 DONE 0.6s
+Starting container: isles26-ensemble-algorithm_container
+c882ed34deb269b84bd8b82073d30e20141f44ca234fa01a37a24d66b2633594
+Container IP: 172.19.0.2, base URL: http://172.19.0.2:4743
+Waiting for /health to return 200 ...
+Attempt 1/60 — /health returned 000000. Retrying in 10s ...
+Loading model during startup …
+========================================
+Collecting Torch CUDA information
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+Torch CUDA is available: True
+	number of devices: 1
+	current device: 0
+	properties: _CudaDeviceProperties(name='NVIDIA RTX A1000', major=8, minor=6, total_memory=8187MB, multi_processor_count=18, uuid=130b4641-55a9-a963-f3d0-1b55a9c23cb4, pci_bus_id=1, pci_device_id=0, pci_domain_id=0, L2_cache_size=2MB)
+========================================
+Using device: cuda
+Attempt 2/60 — /health returned 000000. Retrying in 10s ...
+
+Loading model: baseline (nnUNetTrainer__nnUNetPlans__3d_fullres)
+  Model folder: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainer__nnUNetPlans__3d_fullres
+  Folder exists: True
+Attempt 3/60 — /health returned 000000. Retrying in 10s ...
+  ✓ baseline loaded successfully
+
+Loading model: resenc (nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres)
+  Model folder: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres
+  Folder exists: True
+Attempt 4/60 — /health returned 000000. Retrying in 10s ...
+Attempt 5/60 — /health returned 000000. Retrying in 10s ...
+Attempt 6/60 — /health returned 000000. Retrying in 10s ...
+Attempt 7/60 — /health returned 000000. Retrying in 10s ...
+  ✓ resenc loaded successfully
+
+Checking postprocessing file: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainer__nnUNetPlans__3d_fullres/postprocessing.pkl
+  (Postprocessing file has no active functions/kwargs - no-op)
+
+Checking postprocessing file: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainer__nnUNetPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/postprocessing.pkl
+  (Postprocessing file has no active functions/kwargs - no-op)
+
+Checking postprocessing file: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres/postprocessing.pkl
+  (Postprocessing file has no active functions/kwargs - no-op)
+
+Checking postprocessing file: /opt/ml/model/Dataset001_ISLES26/nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/postprocessing.pkl
+  (Postprocessing file has no active functions/kwargs - no-op)
+
+All 2 models loaded. Ready for inference.
+Model loaded successfully.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4743 (Press CTRL+C to quit)
+/health returned 200 — server is ready
+Provisioning input for interface: interf0
+Input files staged:
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/.staging_input/images/t1-brain-mri/r001s001_0000.nii.gz
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/.staging_input/images/t1-brain-mri/README.txt
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/.staging_input/images/t1-brain-mri/soop0468_0000.nii.gz
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/.staging_input/inputs.json
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/.staging_input/stroke-metadata.json
+Calling POST /invoke (timeout: 600s) ...
+Invoke called — starting inference …
+Input image: /input/images/t1-brain-mri/r001s001_0000.nii.gz
+
+Running inference with baseline model ...
+There are 1 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 1 cases that I would like to predict
+
+Predicting case:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:07<00:51,  7.38s/it] 38%|███▊      | 3/8 [00:07<00:10,  2.12s/it] 50%|█████     | 4/8 [00:08<00:06,  1.72s/it] 62%|██████▎   | 5/8 [00:09<00:04,  1.46s/it] 75%|███████▌  | 6/8 [00:10<00:02,  1.30s/it] 88%|████████▊ | 7/8 [00:11<00:01,  1.19s/it]100%|██████████| 8/8 [00:12<00:00,  1.12s/it]100%|██████████| 8/8 [00:12<00:00,  1.59s/it]
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:01,  3.26it/s] 38%|███▊      | 3/8 [00:01<00:02,  1.73it/s] 50%|█████     | 4/8 [00:02<00:02,  1.37it/s] 62%|██████▎   | 5/8 [00:03<00:02,  1.25it/s] 75%|███████▌  | 6/8 [00:04<00:01,  1.17it/s] 88%|████████▊ | 7/8 [00:05<00:00,  1.12it/s]100%|██████████| 8/8 [00:06<00:00,  1.10it/s]100%|██████████| 8/8 [00:06<00:00,  1.26it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:01,  3.37it/s] 38%|███▊      | 3/8 [00:01<00:02,  1.74it/s] 50%|█████     | 4/8 [00:02<00:02,  1.37it/s] 62%|██████▎   | 5/8 [00:03<00:02,  1.25it/s] 75%|███████▌  | 6/8 [00:04<00:01,  1.17it/s] 88%|████████▊ | 7/8 [00:05<00:00,  1.13it/s]100%|██████████| 8/8 [00:06<00:00,  1.09it/s]100%|██████████| 8/8 [00:06<00:00,  1.26it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:01,  3.48it/s] 38%|███▊      | 3/8 [00:01<00:02,  1.75it/s] 50%|█████     | 4/8 [00:02<00:02,  1.39it/s] 62%|██████▎   | 5/8 [00:03<00:02,  1.24it/s] 75%|███████▌  | 6/8 [00:04<00:01,  1.16it/s] 88%|████████▊ | 7/8 [00:05<00:00,  1.12it/s]100%|██████████| 8/8 [00:06<00:00,  1.07it/s]100%|██████████| 8/8 [00:06<00:00,  1.24it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:01,  3.47it/s] 38%|███▊      | 3/8 [00:01<00:02,  1.74it/s] 50%|█████     | 4/8 [00:02<00:02,  1.37it/s] 62%|██████▎   | 5/8 [00:03<00:02,  1.24it/s] 75%|███████▌  | 6/8 [00:04<00:01,  1.16it/s] 88%|████████▊ | 7/8 [00:05<00:00,  1.12it/s]100%|██████████| 8/8 [00:06<00:00,  1.08it/s]100%|██████████| 8/8 [00:06<00:00,  1.25it/s]
+sending off prediction to background worker for resampling and export
+done with case
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/1 [00:00<?, ?it/s]Collecting results: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]Collecting results: 100%|██████████| 1/1 [00:01<00:00,  1.10s/it]
+Segmentation export complete.
+  ✓ baseline: softmax shape = (2, 181, 213, 173)
+
+Running inference with resenc model ...
+There are 1 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 1 cases that I would like to predict
+
+Predicting case:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:05,  1.33it/s] 25%|██▌       | 2/8 [00:02<00:06,  1.11s/it] 38%|███▊      | 3/8 [00:03<00:06,  1.22s/it] 50%|█████     | 4/8 [00:04<00:05,  1.27s/it] 62%|██████▎   | 5/8 [00:06<00:03,  1.30s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.32s/it] 88%|████████▊ | 7/8 [00:08<00:01,  1.33s/it]100%|██████████| 8/8 [00:10<00:00,  1.34s/it]100%|██████████| 8/8 [00:10<00:00,  1.28s/it]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:04,  1.63it/s] 25%|██▌       | 2/8 [00:01<00:06,  1.06s/it] 38%|███▊      | 3/8 [00:03<00:05,  1.20s/it] 50%|█████     | 4/8 [00:04<00:05,  1.26s/it] 62%|██████▎   | 5/8 [00:06<00:03,  1.30s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.32s/it] 88%|████████▊ | 7/8 [00:08<00:01,  1.34s/it]100%|██████████| 8/8 [00:10<00:00,  1.35s/it]100%|██████████| 8/8 [00:10<00:00,  1.27s/it]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:04,  1.51it/s] 25%|██▌       | 2/8 [00:02<00:06,  1.08s/it] 38%|███▊      | 3/8 [00:03<00:06,  1.21s/it] 50%|█████     | 4/8 [00:04<00:05,  1.28s/it] 62%|██████▎   | 5/8 [00:06<00:04,  1.34s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.35s/it] 88%|████████▊ | 7/8 [00:08<00:01,  1.36s/it]100%|██████████| 8/8 [00:10<00:00,  1.36s/it]100%|██████████| 8/8 [00:10<00:00,  1.29s/it]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:04,  1.56it/s] 25%|██▌       | 2/8 [00:02<00:06,  1.08s/it] 38%|███▊      | 3/8 [00:03<00:06,  1.21s/it] 50%|█████     | 4/8 [00:04<00:05,  1.27s/it] 62%|██████▎   | 5/8 [00:06<00:03,  1.31s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.33s/it] 88%|████████▊ | 7/8 [00:08<00:01,  1.35s/it]100%|██████████| 8/8 [00:10<00:00,  1.36s/it]100%|██████████| 8/8 [00:10<00:00,  1.28s/it]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:04,  1.61it/s] 25%|██▌       | 2/8 [00:02<00:06,  1.07s/it] 38%|███▊      | 3/8 [00:03<00:06,  1.21s/it] 50%|█████     | 4/8 [00:04<00:05,  1.28s/it] 62%|██████▎   | 5/8 [00:06<00:03,  1.31s/it] 75%|███████▌  | 6/8 [00:07<00:02,  1.34s/it] 88%|████████▊ | 7/8 [00:08<00:01,  1.35s/it]100%|██████████| 8/8 [00:10<00:00,  1.36s/it]100%|██████████| 8/8 [00:10<00:00,  1.28s/it]
+sending off prediction to background worker for resampling and export
+done with case
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Segmentation export complete.
+Collecting results:   0%|          | 0/1 [00:00<?, ?it/s]Collecting results: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]Collecting results: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]
+  ✓ resenc: softmax shape = (2, 181, 213, 173)
+
+Ensembling 2 models by averaging softmax ...
+  Ensemble softmax shape: (2, 181, 213, 173)
+  Binary segmentation: unique values = [0 1], foreground voxels = 76131
+  Probability map: min = 0.0000, max = 0.9996, mean = 0.0115
+  ✓ Segmentation written: /output/images/stroke-lesion-segmentation/5fe1825a-7824-454b-af31-438e1e905741.nii.gz
+  ✓ Probability map written: /output/images/lesion-probability-map/5fe1825a-7824-454b-af31-438e1e905741.nii.gz
+
+Inference complete!
+Inference complete.
+/invoke returned 201 — inference succeeded
+Collecting output for interface: interf0
+Output files:
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/output/interf0/images/lesion-probability-map/5fe1825a-7824-454b-af31-438e1e905741.nii.gz
+/mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/output/interf0/images/stroke-lesion-segmentation/5fe1825a-7824-454b-af31-438e1e905741.nii.gz
+=== Test run completed successfully! ===
+Outputs are in: /mnt/c/Users/Admin/Desktop/meghpatel/isles26/isles26_docker/test/output/interf0/
+Save this image for uploading via ./do_save.sh
+Cleaning up ...
