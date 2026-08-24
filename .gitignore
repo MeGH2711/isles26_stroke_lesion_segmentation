@@ -34,13 +34,7 @@ env.bak/
 venv.bak/
 .venv/
 
-# Large Datasets, Raw Images, and Processed Data
-data/
-raw_data/
-checkpoints/
-sync_temp/
-
-# Medical Imaging Data & Formats
+# Heavy Medical Images, Processed Arrays, and Checkpoints (EXCLUDED FROM GITHUB)
 *.nii
 *.nii.gz
 *.b2nd
@@ -53,7 +47,7 @@ sync_temp/
 *.hdf5
 *.npz
 
-# Model Archive Tarballs & Large Archives
+# Model Archives & Large Zip Files
 *.tar
 *.tar.gz
 *.zip
@@ -61,9 +55,10 @@ sync_temp/
 *.rar
 `
 
-# Logs & Temporary Files
-*.log
-*.tmp
+# Temporary / Scratch Directories
+raw_data/
+checkpoints/
+sync_temp/
 temp/
 scratch/
 

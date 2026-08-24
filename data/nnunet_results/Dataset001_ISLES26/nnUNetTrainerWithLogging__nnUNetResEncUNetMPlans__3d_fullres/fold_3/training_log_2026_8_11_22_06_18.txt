@@ -1,0 +1,36 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+2026-08-11 22:06:21.903988: do_dummy_2d_data_aug: False 
+2026-08-11 22:06:21.911988: Using splits from existing split file: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\splits_final.json 
+2026-08-11 22:06:21.937988: The split file contains 5 splits. 
+2026-08-11 22:06:21.942993: Desired fold for training: 3 
+2026-08-11 22:06:21.947988: This split has 1163 training and 290 validation cases. 
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 128, 128], 'median_image_size_in_voxels': [148.0, 167.0, 137.0], 'spacing': [1.0, 1.0, 1.0], 'normalization_schemes': ['ZScoreNormalization'], 'use_mask_for_norm': [True], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.ResidualEncoderUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': [32, 64, 128, 256, 320, 320], 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'strides': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'n_blocks_per_stage': [1, 3, 4, 6, 6, 6], 'n_conv_per_stage_decoder': [1, 1, 1, 1, 1], 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ['conv_op', 'norm_op', 'dropout_op', 'nonlin']}, 'batch_dice': False} 
+ 
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset001_ISLES26', 'plans_name': 'nnUNetResEncUNetMPlans', 'original_median_spacing_after_transp': [1.0, 1.0, 1.0], 'original_median_shape_after_transp': [150, 169, 138], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'nnUNetPlannerResEncM', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 3207762.25, 'mean': 9622.104325549775, 'median': 248.9982147216797, 'min': -1.9994659423828125, 'percentile_00_5': 6.002288818359375, 'percentile_99_5': 777965.9375, 'std': 94929.2592213493}}} 
+ 
+2026-08-11 22:06:30.135425: Unable to plot network architecture: 
+2026-08-11 22:06:30.141424: No module named 'hiddenlayer' 
+2026-08-11 22:06:33.912903: Training done. 
+2026-08-11 22:06:33.948897: Using splits from existing split file: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\splits_final.json 
+2026-08-11 22:06:33.957897: The split file contains 5 splits. 
+2026-08-11 22:06:33.963897: Desired fold for training: 3 
+2026-08-11 22:06:33.968897: This split has 1163 training and 290 validation cases. 
+2026-08-11 22:06:33.977896: predicting r001s014 
+2026-08-11 22:06:34.303393: r001s014, shape torch.Size([1, 152, 176, 139]), rank 0 
+2026-08-11 22:06:47.862176: predicting r001s019 
+2026-08-11 22:06:47.985344: r001s019, shape torch.Size([1, 141, 174, 133]), rank 0 
+2026-08-11 22:06:58.712842: predicting r001s022 
+2026-08-11 22:06:58.832484: r001s022, shape torch.Size([1, 144, 181, 141]), rank 0 
+2026-08-11 22:07:09.576739: predicting r001s029 
+2026-08-11 22:07:09.706133: r001s029, shape torch.Size([1, 153, 172, 143]), rank 0 
+2026-08-11 22:07:20.777862: predicting r001s039 
+2026-08-11 22:07:20.983868: r001s039, shape torch.Size([1, 153, 167, 143]), rank 0 

@@ -1,0 +1,7 @@
+***Run inference like this:***
+
+nnUNetv2_predict -d Dataset001_ISLES26 -i INPUT_FOLDER -o OUTPUT_FOLDER -f  0 1 2 3 4 -tr nnUNetTrainerWithLogging -c 3d_fullres -p nnUNetResEncUNetMPlans
+
+***Once inference is completed, run postprocessing like this:***
+
+nnUNetv2_apply_postprocessing -i OUTPUT_FOLDER -o OUTPUT_FOLDER_PP -pp_pkl_file C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres\crossval_results_folds_0_1_2_3_4\postprocessing.pkl -np 8 -plans_json C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres\crossval_results_folds_0_1_2_3_4\plans.json

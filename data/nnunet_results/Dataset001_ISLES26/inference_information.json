@@ -1,0 +1,34 @@
+{
+    "all_results": {
+        "nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres": 0.6499064148039387
+    },
+    "best_model_or_ensemble": {
+        "postprocessing_file": "C:\\Users\\Admin\\Desktop\\meghpatel\\isles26\\data\\nnunet_results\\Dataset001_ISLES26\\nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres\\crossval_results_folds_0_1_2_3_4\\postprocessing.pkl",
+        "result_on_crossval_post_pp": 0.6499064148039387,
+        "result_on_crossval_pre_pp": 0.6499064148039387,
+        "selected_model_or_models": [
+            {
+                "configuration": "3d_fullres",
+                "plans_identifier": "nnUNetResEncUNetMPlans",
+                "trainer": "nnUNetTrainerWithLogging"
+            }
+        ],
+        "some_plans_file": "C:\\Users\\Admin\\Desktop\\meghpatel\\isles26\\data\\nnunet_results\\Dataset001_ISLES26\\nnUNetTrainerWithLogging__nnUNetResEncUNetMPlans__3d_fullres\\crossval_results_folds_0_1_2_3_4\\plans.json"
+    },
+    "considered_models": [
+        {
+            "configuration": "3d_fullres",
+            "plans": "nnUNetResEncUNetMPlans",
+            "trainer": "nnUNetTrainerWithLogging"
+        }
+    ],
+    "dataset_name_or_id": "Dataset001_ISLES26",
+    "ensembling_allowed": true,
+    "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ]
+}

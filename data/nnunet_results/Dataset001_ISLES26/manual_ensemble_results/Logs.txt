@@ -1,0 +1,195 @@
+
+(venv) C:\Users\Admin\Desktop\meghpatel\isles26\src>py manual_cross_ensemble.py
+Total cases across all folds' validation sets: 1453
+
+======================================================================
+Evaluating: baseline
+======================================================================
+Scoring [baseline]:  29%|██████████████████████████████████████████████████▋                                                                                                                           | 423/1453 [02:47<04:32,  3.78case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E461030): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E461030): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [baseline]:  50%|███████████████████████████████████████████████████████████████████████████████████████▋                                                                                      | 732/1453 [12:27<36:33,  3.04s/case]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DC2F0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DC2F0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [baseline]: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [26:33<00:00,  1.10s/case]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\baseline_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7384
+  MEDIUM     n= 380  Dice=0.5604
+  SMALL      n= 186  Dice=0.3988
+  EMPTY      n=   5  Dice=0.2000
+  OVERALL    n=1453  Dice=0.6465
+
+======================================================================
+Evaluating: instance_loss
+======================================================================
+Scoring [instance_loss]:  29%|█████████████████████████████████████████████████▏                                                                                                                       | 423/1453 [05:44<07:30,  2.29case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E8330): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E8330): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [instance_loss]:  50%|█████████████████████████████████████████████████████████████████████████████████████▏                                                                                   | 732/1453 [11:00<03:16,  3.66case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E86F0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E86F0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [instance_loss]: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [17:37<00:00,  1.37case/s]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\instance_loss_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7378
+  MEDIUM     n= 380  Dice=0.5608
+  SMALL      n= 186  Dice=0.3923
+  EMPTY      n=   5  Dice=0.0000
+  OVERALL    n=1453  Dice=0.6447
+
+======================================================================
+Evaluating: resenc
+======================================================================
+Scoring [resenc]:  29%|███████████████████████████████████████████████████▏                                                                                                                            | 423/1453 [02:55<04:35,  3.74case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E88D0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E88D0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [resenc]:  50%|████████████████████████████████████████████████████████████████████████████████████████▋                                                                                       | 732/1453 [06:05<03:23,  3.55case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E5AD0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E5AD0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [resenc]: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [12:33<00:00,  1.93case/s]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\resenc_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7435
+  MEDIUM     n= 380  Dice=0.5722
+  SMALL      n= 186  Dice=0.3754
+  EMPTY      n=   5  Dice=0.4000
+  OVERALL    n=1453  Dice=0.6504
+
+======================================================================
+Evaluating: baseline + instance_loss
+======================================================================
+Scoring [baseline + instance_loss]:  29%|█████████████████████████████████████████████▉                                                                                                                | 423/1453 [10:15<13:02,  1.32case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E5710): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E5710): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [baseline + instance_loss]:  50%|███████████████████████████████████████████████████████████████████████████████▌                                                                              | 732/1453 [16:09<05:17,  2.27case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E8980): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7E8980): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [baseline + instance_loss]: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [35:27<00:00,  1.46s/case]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\baseline_plus_instance_loss_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7387
+  MEDIUM     n= 380  Dice=0.5621
+  SMALL      n= 186  Dice=0.3955
+  EMPTY      n=   5  Dice=0.2000
+  OVERALL    n=1453  Dice=0.6467
+
+======================================================================
+Evaluating: baseline + resenc
+======================================================================
+Scoring [baseline + resenc]:  29%|████████████████████████████████████████████████                                                                                                                     | 423/1453 [08:50<07:20,  2.34case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E60E600): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E60E600): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [baseline + resenc]:  50%|███████████████████████████████████████████████████████████████████████████████████                                                                                  | 732/1453 [14:01<07:45,  1.55case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DCC50): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DCC50): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [baseline + resenc]: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [32:44<00:00,  1.35s/case]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\baseline_plus_resenc_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7448
+  MEDIUM     n= 380  Dice=0.5718
+  SMALL      n= 186  Dice=0.3942
+  EMPTY      n=   5  Dice=0.4000
+  OVERALL    n=1453  Dice=0.6535
+
+======================================================================
+Evaluating: instance_loss + resenc
+======================================================================
+Scoring [instance_loss + resenc]:  29%|██████████████████████████████████████████████▌                                                                                                                 | 423/1453 [07:29<08:55,  1.93case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DB100): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DB100): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [instance_loss + resenc]:  50%|████████████████████████████████████████████████████████████████████████████████▌                                                                               | 732/1453 [13:53<06:47,  1.77case/s]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DC6B0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E7DC6B0): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [instance_loss + resenc]: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [33:58<00:00,  1.40s/case]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\instance_loss_plus_resenc_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7446
+  MEDIUM     n= 380  Dice=0.5716
+  SMALL      n= 186  Dice=0.3925
+  EMPTY      n=   5  Dice=0.2000
+  OVERALL    n=1453  Dice=0.6524
+
+======================================================================
+Evaluating: baseline + instance_loss + resenc
+======================================================================
+Scoring [baseline + instance_loss + resenc]:  29%|███████████████████████████████████████████▍                                                                                                         | 423/1453 [14:10<25:45,  1.50s/case]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E8330): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11D9E8330): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s053.nii.gz has unexpected scales in sform
+
+Scoring [baseline + instance_loss + resenc]:  50%|███████████████████████████████████████████████████████████████████████████                                                                          | 732/1453 [31:40<30:10,  2.51s/case]WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E461210): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+WARNING: In D:\a\SimpleITK\SimpleITK\bld\ITK\Modules\IO\NIFTI\src\itkNiftiImageIO.cxx, line 2008
+NiftiImageIO (000001D11E461210): C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_preprocessed\Dataset001_ISLES26\gt_segmentations\r040s087.nii.gz has unexpected scales in sform
+
+Scoring [baseline + instance_loss + resenc]: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1453/1453 [1:09:24<00:00,  2.87s/case]
+  Per-case results saved to: C:\Users\Admin\Desktop\meghpatel\isles26\data\nnunet_results\Dataset001_ISLES26\manual_ensemble_results\per_case\baseline_plus_instance_loss_plus_resenc_per_case.csv
+  n=1453
+  LARGE      n= 882  Dice=0.7429
+  MEDIUM     n= 380  Dice=0.5654
+  SMALL      n= 186  Dice=0.3929
+  EMPTY      n=   5  Dice=0.2000
+  OVERALL    n=1453  Dice=0.6498
+
+======================================================================
+SUMMARY - OVERALL Dice per combination, sorted best to worst
+======================================================================
+  0.6535   baseline + resenc
+  0.6524   instance_loss + resenc
+  0.6504   resenc
+  0.6498   baseline + instance_loss + resenc
+  0.6467   baseline + instance_loss
+  0.6465   baseline
+  0.6447   instance_loss
+
+======================================================================
+SUMMARY - SMALL bucket Dice per combination, sorted best to worst
+======================================================================
+  0.3988   baseline
+  0.3955   baseline + instance_loss
+  0.3942   baseline + resenc
+  0.3929   baseline + instance_loss + resenc
+  0.3925   instance_loss + resenc
+  0.3923   instance_loss
+  0.3754   resenc
+
+(venv) C:\Users\Admin\Desktop\meghpatel\isles26\src>
